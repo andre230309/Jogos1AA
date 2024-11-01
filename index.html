@@ -84,11 +84,15 @@
           gameIframe.src = "https://scratch.mit.edu/projects/883032257/embed" ;
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
-        } else if (idade >= 6 && idade <= 10) {
+        } else if (idade >= 18 && idade <= 30) {
           gameIframe.src = "https://scratch.mit.edu/projects/761728632/embed";
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
-        } else {
+        } else if (idade >= 6 && idade <= 10) {
+          gameIframe.src = "https://scratch.mit.edu/projects/189057541/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+         {
           gameIframe.classList.add('hidden');
           statusMessage.textContent = "Em construção";
         }
