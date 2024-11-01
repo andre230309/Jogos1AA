@@ -96,11 +96,11 @@
           gameIframe.src = "https://scratch.mit.edu/projects/189057541/embed";
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
-         {
+        } else {
           gameIframe.classList.add('hidden');
           statusMessage.textContent = "Em construção";
         }
-      }
+      
 
       // Detecta o pressionamento da tecla Enter no campo de idade
       idadeInput.addEventListener('keydown', function(event) {
