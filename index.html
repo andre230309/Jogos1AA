@@ -72,35 +72,31 @@
 
       // Função para exibir o jogo com base na idade
       function geraRecomendacao(idade) {
-        if (idade >= 15 && idade <= 18) {
+        if (idade >= 0 && idade <= 5) {
+          gameIframe.src = "https://scratch.mit.edu/projects/883032257/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else if (idade >= 6 && idade <= 10) {
+          gameIframe.src = "https://scratch.mit.edu/projects/189057541/embed" ;
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else if (idade >= 11 && idade <= 13) {
+          gameIframe.src = "https://scratch.mit.edu/projects/761728632/embed" ;
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else if (idade >= 14 && idade <= 17) {
           gameIframe.src = "https://scratch.mit.edu/projects/467695300/embed" ;
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
-        } 
-        else if (idade >= 11 && idade <= 14) {
+        } else if (idade >= 18 && idade <= 200) {
           gameIframe.src = "https://scratch.mit.edu/projects/391386137/embed" ;
           gameIframe.classList.remove('hidden');
           statusMessage.textContent = "Bom jogo!";
-        } 
-        else if (idade >= 0 && idade <= 5) {
-          gameIframe.src = "https://scratch.mit.edu/projects/883032257/embed" ;
-          gameIframe.classList.remove('hidden');
-          statusMessage.textContent = "Bom jogo!";
-        } 
-        else if (idade >= 19 && idade <= 30) {
-          gameIframe.src = "https://scratch.mit.edu/projects/761728632/embed";
-          gameIframe.classList.remove('hidden');
-          statusMessage.textContent = "Bom jogo!";
-        } 
-        else if (idade >= 6 && idade <= 10) {
-          gameIframe.src = "https://scratch.mit.edu/projects/189057541/embed";
-          gameIframe.classList.remove('hidden');
-          statusMessage.textContent = "Bom jogo!";
-        } else {
+        }  else {
           gameIframe.classList.add('hidden');
           statusMessage.textContent = "Em construção";
         }
-      
+      }
 
       // Detecta o pressionamento da tecla Enter no campo de idade
       idadeInput.addEventListener('keydown', function(event) {
@@ -120,4 +116,3 @@
   </div>
 </body>
 </html>
-
